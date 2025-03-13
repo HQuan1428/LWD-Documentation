@@ -2,4 +2,9 @@
 
 ## Introductions of Web
 
-## [HTMl (HyperText Markup Language)](./html.md)
+## HTMl (HyperText Markup Language)
+**HTML** (HyperText Markup Language) is a markup language that tells web browsers how to structure the web pages you visit. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. 
+See more details [here](./html.md)
+
+## References
+1. [Mmdn web docs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
