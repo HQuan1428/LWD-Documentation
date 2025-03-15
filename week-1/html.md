@@ -23,12 +23,24 @@
     - [Applying CSS and JS to HTML](#applying-css-and-js-to-html)
     - [Setting the primary language of the document](#setting-the-primary-language-of-the-document)
     - [Refernces](#refernces)
+  - [Headings and Paragraphs in HTML](#headings-and-paragraphs-in-html)
+    - [Headings and Paragraphs](#headings-and-paragraphs)
+    - [References](#references-1)
+  - [Emphasis and Improtance](#emphasis-and-improtance)
+    - [What are emphasis and important?](#what-are-emphasis-and-important)
+    - [Emphasis](#emphasis)
+    - [Strong importance](#strong-importance)
+    - [Italic, Bold, Underline](#italic-bold-underline)
+    - [References](#references-2)
+  - [Lists](#lists)
+    - [](#)
+    - [References](#references-3)
   - [Creating fist HTML document](#creating-fist-html-document)
     - [Images](#images)
     - [Marking up text](#marking-up-text)
       - [Headings](#headings)
       - [Paragraphs](#paragraphs)
-      - [Lists](#lists)
+      - [Lists](#lists-1)
       - [Links](#links)
 
 
@@ -194,6 +206,46 @@ You can (and really should) set the language of your page. This can done by addi
 ### Refernces 
 [What is the head? webpage metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
 
+## Headings and Paragraphs in HTML
+
+### Headings and Paragraphs
+In HTML, each paragraph has to be wrapped in a \<p> element, like so;
+```html
+    <p> I am a paragraph, oh yes I am. </p>
+```
+Each heading has to be wrapped in a healing element:
+```html
+    <h1> I am the title of the story. </h1>
+```
+There are six heading elements: h1, h2, h3,...,h6. Each element represents a different level of content in the document.
+
+### References
+[Headings and Paragraphs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)
+
+## Emphasis and Improtance
+### What are emphasis and important?
+In human language, we often emphasize certain words to alter the meaning of a sentence, and we often want to mark certain words as improtant or different insome way. HTML provides various semantic elements to allow us to mark up textual content with such effects, and in this section, we'll look at a few of the most common ones.
+
+### Emphasis
+In HTML, we use \<em> element to mark up such instances.
+On a webpage, the text in \<em> tag will be displayed in italics
+
+### Strong importance
+In HTML, we use the \<strong> element to mark up such instances.
+On a webpage, the text in \<em> tag wil be appear in bod
+
+### Italic, Bold, Underline
+HTML5 redefined **\<b>, \<i>, \<u>** with new, somewhat confusing, semantic roles 
+
+### References
+[Emphasis and Imprtance](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)
+
+## Lists
+
+### 
+
+### References
+[Lists](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Lists)
 
 
 
