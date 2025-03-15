@@ -1,6 +1,37 @@
 
 # HTML (HyperText Markup Language)
 
+## Table of contents
+- [HTML (HyperText Markup Language)](#html-hypertext-markup-language)
+  - [Table of contents](#table-of-contents)
+  - [HTML Foundations](#html-foundations)
+    - [What is the HTML?](#what-is-the-html)
+    - [Anatomy of an HTML element](#anatomy-of-an-html-element)
+    - [Nesting elements](#nesting-elements)
+    - [Void elements](#void-elements)
+    - [Attributes](#attributes)
+    - [Boolean attributes](#boolean-attributes)
+    - [Whitespace in HTML](#whitespace-in-html)
+    - [Characters references: including special characters in HTML](#characters-references-including-special-characters-in-html)
+    - [HTML comments](#html-comments)
+    - [References](#references)
+  - [What's the head? Webpage metadata](#whats-the-head-webpage-metadata)
+    - [What is the HTML head?](#what-is-the-html-head)
+    - [Adding the title](#adding-the-title)
+    - [Metadata: The \<meta\> element](#metadata-the-meta-element)
+    - [Adding custom icons to your site](#adding-custom-icons-to-your-site)
+    - [Applying CSS and JS to HTML](#applying-css-and-js-to-html)
+    - [Setting the primary language of the document](#setting-the-primary-language-of-the-document)
+    - [Refernces](#refernces)
+  - [Creating fist HTML document](#creating-fist-html-document)
+    - [Images](#images)
+    - [Marking up text](#marking-up-text)
+      - [Headings](#headings)
+      - [Paragraphs](#paragraphs)
+      - [Lists](#lists)
+      - [Links](#links)
+
+
 ## HTML Foundations 
 
 ### What is the HTML?
