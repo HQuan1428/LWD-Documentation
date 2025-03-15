@@ -69,6 +69,10 @@ To write a html comment, wrap it in the special markers **\<!-- -->**. For examp
 ```html
     <!-- This is a example comment -->
 ```
+### References
+[Basic HTML Syntax](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
+
+
 ## What's the head? Webpage metadata
 
 ### What is the HTML head?
@@ -146,6 +150,18 @@ These are most commonly applied to a web page using the \<link> element and the 
 ```html
     <script src="script.js" defer></script>
 ``` 
+
+### Setting the primary language of the document
+You can (and really should) set the language of your page. This can done by adding the **lang attribute** to the opening HTML tags.
+```html
+    <html lang="en-US">
+    …
+    </html>
+
+```
+
+### Refernces 
+[What is the head? webpage metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
 
 
 
