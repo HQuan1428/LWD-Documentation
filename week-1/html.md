@@ -95,12 +95,59 @@ The difference between \<title> and \<h1> is that:
 - The **title** element is metadata that represents the title of the overall HTML document(not the document's content).
 
 ### Metadata: The \<meta> element
-Metadata is data that describes data, and HTML has an "offical" way of adding metadata to a document - the **\<metadata>** element.
+Metadata is data that describes data, and HTML has an "offical" way of adding metadata to a document - the **\<metadata>** element. Of course, The other stuff we are talking about in this article could also be thought of as metadata too. 
+There are a lot of different types of **\<meta>** elements that can be included in your page's \<head> 
+
+I'll explaina few things that you might commonly see.
+- Specifying your document's character encoding.
+    - In the example we saw above, This line was included:
+    ```html
+        <meta charset="utf-8" />
+    ```
+    - This element specifies the document's character encoding - the character set that the document is permitted to use **utf-8** is a universal character set that includes pretty much any character from human language. This means that your web page will be able to handle displaying any language; it's therefore a good idea to set this on every web page you create!. For example, your page could handle English and Japanese just like:
+    ![metadata example: character set utf-8](../images/week-1/metadata-example.png)
+- Adding an author and description
+    - Many **\<meta>** elements include **name** and **content** attributes:
+        - **name** specifies the type of meta element it is; what type of information it contains.
+        - **content** specifies the actual meta content.
+
+    - Two such meta elements that use useful to include on your page define the author of the page, and provide a concise description of the page. Let's lock at an example:
+    ```html
+        <meta name="author" content="Chris Mills" />
+        <meta
+        name="description"
+        content="The MDN Web Docs Learning Area aims to provide
+        complete beginners to the Web with all they need to know to get
+        started with developing websites and applications." />
+    ```
+    - Specifying an author is beneficial in many ways: it is useful to be able to understand who wrote the page, if you have any questions about the content and you would like to contact them. Some content management systems have facilities to automatically extract page author information and make it available for such purpose.
+    - Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines (such activites are termed [Search Engine Optimization](https://developer.mozilla.org/en-US/docs/Glossary/SEO), [SEO](https://developer.mozilla.org/en-US/docs/Glossary/SEO))
+- Other types of metadata
+    - As your travel around the web, you'll find other types of metadata, too. Many of the features you'll see on websites are proprietary creations designed to provide certain sites (such as social networking sites) with specific information they can use
+    - For example, [Open Graph Data](https://ogp.me/) is a metadata protocol that Facebook invented to provide richer metadata for websites
+
+### Adding custom icons to your site
+To further enrich you site design, you can add references to custom icons in your metadata, and these will displayed in certain contexts. The most commonly used of these is the favicon (short for "Favorites icon", refering to its use in the "favorites" or "bookmarks" lists in browsers).
+Favicon displayed in the browser tab containing each open page, and next to bookmarked pages in the bookmarks pannel.
+A favicon can be added to your page by:
+    1. Saving it in the same directory as the site's index page, saved in **.ico** format (most also support favicons in more common formats like **.gif** or **.png**)
+    2. Adding the following line into your HTML's \<head> block to reference it:
+    ```html
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    ```
+
+### Applying CSS and JS to HTML
+These are most commonly applied to a web page using the \<link> element and the \<script> element, respectively.
+- The **\<link>** element should always go inside the head of your document. This takes two attributes, **rel="stylesheet"**, which indicates that it is the document's stylesheet, and href, which contains the path to he stylesheet file:
+```html
+    <link rel="stylesheet" href="style.css" />
+```
+- The **\<script>**  
 
 
 
 
-### Creating fist HTML document
+## Creating fist HTML document
 ```html
    <!doctype html>
     <html lang="en-US">
