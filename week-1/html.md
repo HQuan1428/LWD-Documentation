@@ -139,10 +139,13 @@ A favicon can be added to your page by:
 ### Applying CSS and JS to HTML
 These are most commonly applied to a web page using the \<link> element and the \<script> element, respectively.
 - The **\<link>** element should always go inside the head of your document. This takes two attributes, **rel="stylesheet"**, which indicates that it is the document's stylesheet, and href, which contains the path to he stylesheet file:
+    ```html
+        <link rel="stylesheet" href="style.css" />
+    ```
+- The **\<script>** element should also go into the head, and should include a **src** attribute containing the path to the JS you want to load, and **defer**(a boolean attribute), which instructs the browser to load the JS after the page has finished parsing the HTML. The **defer** attribute is useful as it guarantees the HTML is all loaded before the JS runs so that you don't get errors due to JS trying to access and HTML element that doesn't exist on the page yet.
 ```html
-    <link rel="stylesheet" href="style.css" />
-```
-- The **\<script>**  
+    <script src="script.js" defer></script>
+``` 
 
 
 
