@@ -69,6 +69,34 @@ To write a html comment, wrap it in the special markers **\<!-- -->**. For examp
 ```html
     <!-- This is a example comment -->
 ```
+## What's the head? Webpage metadata
+
+### What is the HTML head?
+```html
+    <!doctype html>
+    <html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>My test page</title>
+    </head>
+    <body>
+        <p>This is my page</p>
+    </body>
+</html>
+```
+The head's content is not displayed on the page when loaded in a browser, the head's jog is to contain **metadata** about the document
+- In the above example, the head is quite small. In larger pages however, the head can get quite large
+
+### Adding the title
+\<title> tag - This can be used to add a title to the document.
+\<h1> tag - This can be used to add a title to the page.
+The difference between \<title> and \<h1> is that:
+- The **h1** element appears on the page when loaded in the browser.
+- The **title** element is metadata that represents the title of the overall HTML document(not the document's content).
+
+### Metadata: The \<meta> element
+Metadata is data that describes data, and HTML has an "offical" way of adding metadata to a document - the **\<metadata>** element.
+
 
 
 

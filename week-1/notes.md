@@ -7,4 +7,4 @@
 See more details [here](./html.md)
 
 ## References
-1. [Mmdn web docs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
+1. [Mmdn web docs](https://developer.mozilla.org/en-US/)
