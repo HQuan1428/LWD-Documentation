@@ -33,8 +33,13 @@
     - [Italic, Bold, Underline](#italic-bold-underline)
     - [References](#references-2)
   - [Lists](#lists)
-    - [](#)
+    - [Unordered Lists](#unordered-lists)
+    - [Ordered Lists](#ordered-lists)
+    - [Nesting Lists](#nesting-lists)
+    - [Description Lists](#description-lists)
+      - [Description list example](#description-list-example)
     - [References](#references-3)
+  - [Stru](#stru)
   - [Creating fist HTML document](#creating-fist-html-document)
     - [Images](#images)
     - [Marking up text](#marking-up-text)
@@ -242,11 +247,65 @@ HTML5 redefined **\<b>, \<i>, \<u>** with new, somewhat confusing, semantic role
 
 ## Lists
 
-### 
+### Unordered Lists
+Unordered list are used to mark up lists of items for which the order of the items doesn't matter.
+\<ul> element - this wraps around all the list items.
+\<li> element - this wraps around each the item.
+```html
+    <ul>
+      <li>milk</li>
+      <li>eggs</li>
+      <li>bread</li>
+      <li>hummus</li>
+    </ul>
+```
+
+### Ordered Lists
+Ordered list are lists in which the order of the items does matter. 
+The mark up structures is the same as for unordered lists, except that you have to wrap the list items in an \<ol> element, rather than \<ul>:
+```html    
+    <ol>
+    <li>Drive to the end of the road</li>
+    <li>Turn right</li>
+    <li>Go straight across the first two roundabouts</li>
+    <li>Turn left at the third roundabout</li>
+    <li>The school is on your right, 300 meters up the road</li>
+    </ol>
+```
+### Nesting Lists
+In HTML, a **Nesting List** refers to a list that contains another list inside one of its list items (\<li>).
+
+### Description Lists
+The purpose of description lists is to mark up a set of items and their associated descriptions, such as definitions, or questions and answers.
+Description lists use a different wrapper than the other list types - \<dl> (descripion lists); in addtion each term is wrapped in a \<dt> (description term) element, and each description is wrapped in a \<dd> (description definition) element.
+
+#### Description list example
+```html
+    <dl>
+      <dt>soliloquy</dt>
+      <dd>
+        In drama, where a character speaks to themselves, representing their inner
+        thoughts or feelings and in the process relaying them to the audience (but
+        not to other characters.)
+      </dd>
+      <dt>monologue</dt>
+      <dd>
+        In drama, where a character speaks their thoughts out loud to share them
+        with the audience and any other characters present.
+      </dd>
+      <dt>aside</dt>
+      <dd>
+        In drama, where a character shares a comment only with the audience for
+        humorous or dramatic effect. This is usually a feeling, thought, or piece of
+        additional background information.
+      </dd>
+    </dl>
+```
 
 ### References
 [Lists](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Lists)
 
+## Stru
 
 
 ## Creating fist HTML document
