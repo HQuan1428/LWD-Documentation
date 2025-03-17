@@ -39,7 +39,41 @@
     - [Description Lists](#description-lists)
       - [Description list example](#description-list-example)
     - [References](#references-3)
-  - [Stru](#stru)
+  - [Structuring documents](#structuring-documents)
+    - [Basic section of a document](#basic-section-of-a-document)
+    - [HTML For Structuring Content](#html-for-structuring-content)
+    - [HTML layout elements in more detail](#html-layout-elements-in-more-detail)
+      - [Non-semantic wrappers](#non-semantic-wrappers)
+      - [Line Breaks and horizontal rules.](#line-breaks-and-horizontal-rules)
+    - [References](#references-4)
+  - [Advanced text features](#advanced-text-features)
+    - [Quotations](#quotations)
+      - [Blockquotes](#blockquotes)
+      - [Inline quotations](#inline-quotations)
+      - [Citations](#citations)
+    - [Abbreviations](#abbreviations)
+    - [Marking up contact details](#marking-up-contact-details)
+    - [Superscript and Subscript](#superscript-and-subscript)
+    - [Representing computer code](#representing-computer-code)
+    - [Marking up times and dates](#marking-up-times-and-dates)
+    - [References](#references-5)
+  - [Creating Links](#creating-links)
+    - [What is hyperlink?](#what-is-hyperlink)
+    - [Anatomy of a link](#anatomy-of-a-link)
+      - [Block level links](#block-level-links)
+      - [Image links](#image-links)
+      - [Adding supporting information with the title attribute](#adding-supporting-information-with-the-title-attribute)
+    - [A quick primer on URLs and paths](#a-quick-primer-on-urls-and-paths)
+    - [Email link](#email-link)
+    - [References](#references-6)
+  - [HTML Images](#html-images)
+    - [References](#references-7)
+  - [HTML audio and video](#html-audio-and-video)
+    - [References](#references-8)
+  - [HTML Tables](#html-tables)
+    - [References](#references-9)
+  - [Form and Button in HTML](#form-and-button-in-html)
+    - [References](#references-10)
   - [Creating fist HTML document](#creating-fist-html-document)
     - [Images](#images)
     - [Marking up text](#marking-up-text)
@@ -305,8 +339,294 @@ Description lists use a different wrapper than the other list types - \<dl> (des
 ### References
 [Lists](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Lists)
 
-## Stru
+## Structuring documents
+In addtion to defining individual parts of your page (such as "a paragraph" or "an image"), HTML also boasts a number of block level elements used to define areas of your website (such as "the header", "the navigation menu", "the main content column").
 
+### Basic section of a document
+Webpages can and will look pretty different from one another, but they all tend to share similar standard components, unless the page is displaying a fullscreen video or game, is part of some kind of art project, or is just badly structured:
+
+- Header:
+  - Usually a big strip across the top with a big heading, logo and perhaps a tagline. This usually stays the same from one page of a website to another.
+- Navigation bar:
+  - Links to the site's main sections; usually represented by menu buttons, links, or tabs. 
+- Main content:
+  - A big area in the content that contains most of the unique content of given webpage.
+  - This is the one part of the website that definitely will vary from page to page!
+- Sidebar:
+  - Some peripheral info, links, quotes, ads, etc... . Usually, this is contextual to what is contained in the main content. 
+  - But there are also cases where you'll find some recurring elements like a secondary navigation system.
+- Footer:
+  - A strip across the bottom of the page that generally contains fine point, copyright notices, or contact info. It's a place to put common information (like the header) but usually, that information is not critial or secondary to the website itself. 
+  - The footer is also sometimes used for **SEO** purpose.
+- A "typical website" could be structured something like this:
+![A Typical Website](../images/week-1/typical-website.png)
+
+### HTML For Structuring Content
+To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:
+- header: \<header>
+- navigative bar: \<nav>
+- main content: \<main>, with various content subsections represented by \<article>, \<section>, and \<div> elements.
+- sidebar: \<aside>; often placed inside \<main>
+- footer: \<footer>
+
+### HTML layout elements in more detail 
+It's good to understand the overall meaning of all the HTML sectioning elements in detail - this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our [HTML element reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). For now, these are the main defitions that you should try to understand:
+- \<main> is for content unique to this page. 
+- \<article> encloses a block of related content that makes sense on its own without the rest of the page
+- \<section> is similar to \<acticle>
+- \<aside> contains content that is not directly related to the main content but can provide addional information indirectly related to it.
+- \<header> represents a group of introductory content.
+- \<nav> contains the main navigation functionality for the page.
+- \<footer> represents a group of end content for a page.
+
+#### Non-semantic wrappers
+Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items togetther or wrap some content.
+For cases like these, HTML provides the \<div> and \<span> elements. You should use these preferably with a suitable **class** attribute, to provide some kind of label for them so they can be easily targeted 
+
+#### Line Breaks and horizontal rules.
+Two elements that you'll use occasionally and will want to know about are \<br> and \<hr>
+
+- \<br>: the line break element.
+  - \<br> creates a line break in paragraph.
+- \<hr>: the thematic break element.
+  - \<hr> elements create a horizontal rule in the document that denotes a thematic change in the text (such as a change in topic or scene) 
+
+
+### References
+[Structuring documents](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
+
+## Advanced text features
+Here you'll learn about marking up quotations, description lists, computer code and other relax text, subscript and superscript, contact information, and more
+
+### Quotations
+HTML contains features avaiable for marking up quotaions; which element you use depends on whether you are marking up a block or inline quotaion.
+#### Blockquotes
+If section of block level content (be it a paragraph, multiple paragraphs, a list, etc) is quoted from somewhere else, you should wrap it inside a \<blockquote> element to signify this, and include URL pointing to the source of the quote inside a **cite** attribute. For example, we would just do this:
+```html
+  <p>Here is a blockquote:</p>
+  <blockquote
+    cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    <p>
+      The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+      <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+      an extended quotation.
+    </p>
+  </blockquote>
+```
+
+#### Inline quotations 
+Inline quotations work in exactly the same way, except that they use the \<p> element.
+
+#### Citations
+The content of the **cite** attribute sounds useful, but unfortunately browsers, screen readers, etc. Don't really do much with it. There is no way to get the browser to display the content of **cite**, without writing your own solution using JS or CSS. If you want to make the source of the quotation available on the page you need to make it available in the text via a link or some other appropriate way. 
+There is a **cite** element, but this is meant to contain the title of the resource being quoted, e.g the name of the book. There is no reason, however, why you couldn't link the text inside **\<cite>** to the quote source in some way: 
+```html
+<p>
+  According to the
+  <a href="/en-US/docs/Web/HTML/Element/blockquote">
+    <cite>MDN blockquote page</cite></a>:
+</p>
+
+<blockquote
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
+</blockquote>
+
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+    intended for short quotations that don't require paragraph breaks.
+  </q>
+  — <a href="/en-US/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
+</p>
+```
+
+### Abbreviations
+Another fairly common element you'll meet when looking around the Web is \<abbr> - this is used to wrap around an abbreviaion or acronym
+
+### Marking up contact details
+HTML has an element for marking up contact details - \<address>. This wraps around your contact details, for example:
+```html
+<address>Chris Mills, Manchester, The Grim North, UK</address>
+```
+It could also include more complex markup, and other form of contact information, for example:
+```html
+<address>
+  <p>
+    Chris Mills<br />
+    Manchester<br />
+    The Grim North<br />
+    UK
+  </p>
+
+  <ul>
+    <li>Tel: 01234 567 890</li>
+    <li>Email: me@grim-north.co.uk</li>
+  </ul>
+</address>
+```
+Note that something like this would also be OK, if the linked page contained the contact information:
+```html
+<address>
+  Page written by <a href="../authors/chris-mills/">Chris Mills</a>.
+</address>
+```
+
+### Superscript and Subscript
+You will occasionally need to use superscript and subscript when marking up items like dates, chemical formulea, and mathematical equations so they have the correct meaning, the \<sup> and \<sub> elements handle this job. For exapmle:
+```html
+<p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+<p>
+  Caffeine's chemical formula is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+</p>
+<p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+```
+
+### Representing computer code 
+There are a number of elements available for marking up computer code using HTML:
+- \<code> : For marking up generic pieces of computer code
+- \<pre> : For retaining whitespace (generally code blocks)
+- \<var> : For specifically marking up variable names.
+- \<kbd> : For marking keyboard (and other types of) input entered ino the computer 
+- \<samp> : For marking up the output of a computer program
+
+### Marking up times and dates
+HTML also provides the \<time> element for marking up times and dates in a machine-readable format. For example:
+```html
+<time datetime="2016-01-20">20 January 2016</time>
+```
+The **time** element allows you to attach an unambigous, machine-readable time/date for this purpose.
+
+### References
+[Advanced text features](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)
+
+## Creating Links
+
+Links (also known a hyperlinks) are really important - they are what makes the Web a web.
+
+### What is hyperlink? 
+Hyperlink are a fundamental feature of the web, enabling users to connect documents, resources, and applications via clickable links that navigate to different URLs.
+
+### Anatomy of a link
+A basic link is created by wrapping the text or other content inside and \<a> element and using the **href** attribute, also known as a **HyperText Reference**, or **target**, that contains the web address.
+
+#### Block level links
+As mentioned before, almost any content can be made into a link
+If you want to make a heading element a link then wrap it in an anchor(\<a>) element as shown in the following code snippet:
+```html
+<a href="https://developer.mozilla.org/en-US/">
+  <h1>MDN Web Docs</h1>
+</a>
+<p>
+  Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.
+</p>
+```
+
+#### Image links
+If you have an image you want to make into a link, use the \<a> element to wrap the image file referenced with the \<img> element. 
+
+#### Adding supporting information with the title attribute
+Another attribute you may want to add to your links is **title**. The title contains addtional information about the link.
+
+### A quick primer on URLs and paths
+
+### Email link
+Using the \<a> element and the **mailto:** URL scheme
+For example:
+```html
+<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+```
+
+### References
+[Creating Links](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
+
+## HTML Images
+\<img> element
+
+### References
+[HTML Images](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+
+## HTML audio and video
+\<video> and \<audio>
+
+### References
+[HTML audio and video](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+
+
+## HTML Tables
+
+Example for Table in HTML
+```html
+<table>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Knocky</td>
+    <td>Flor</td>
+    <td>Ella</td>
+    <td>Juan</td>
+  </tr>
+  <tr>
+    <td>Breed</td>
+    <td>Jack Russell</td>
+    <td>Poodle</td>
+    <td>Streetdog</td>
+    <td>Cocker Spaniel</td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td>16</td>
+    <td>9</td>
+    <td>10</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Owner</td>
+    <td>Mother-in-law</td>
+    <td>Me</td>
+    <td>Me</td>
+    <td>Sister-in-law</td>
+  </tr>
+  <tr>
+    <td>Eating Habits</td>
+    <td>Eats everyone's leftovers</td>
+    <td>Nibbles at food</td>
+    <td>Hearty eater</td>
+    <td>Will eat till he explodes</td>
+  </tr>
+</table>
+```
+
+
+### References
+[HTML Tables Basics](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+[HTML Tables Accessibility](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
+
+## Form and Button in HTML
+Example for a basic form in HTML
+```html
+<form action="./submit_page" method="get">
+  <h2>Subscribe to our newsletter</h2>
+  <p>
+    <label for="name">Name (required):</label>
+    <input type="text" name="name" id="name" required />
+  </p>
+  <p>
+    <label for="email">Email (required):</label>
+    <input type="email" name="email" id="email" required />
+  </p>
+  <p>
+    <button>Sign me up!</button>
+  </p>
+</form>
+```
+
+### References
+[Form and Button](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms)
 
 ## Creating fist HTML document
 ```html
