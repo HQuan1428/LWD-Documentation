@@ -15,7 +15,17 @@
     - [Class Selectors](#class-selectors)
     - [ID Selectors](#id-selectors)
     - [How do ID, class, and element selectors compare in terms of specificity and reusability?](#how-do-id-class-and-element-selectors-compare-in-terms-of-specificity-and-reusability)
+    - [Selector Lists](#selector-lists)
+    - [The Universal Selector](#the-universal-selector)
     - [References](#references-2)
+  - [Attribute Selectors](#attribute-selectors)
+    - [Presence and Value selectors](#presence-and-value-selectors)
+    - [Substring matching selectors](#substring-matching-selectors)
+    - [References](#references-3)
+  - [Pseudo-classes and Pseudo-elements](#pseudo-classes-and-pseudo-elements)
+    - [What is pseudo-classes?](#what-is-pseudo-classes)
+    - [What is pseudo-elements?](#what-is-pseudo-elements)
+    - [References](#references-4)
 
 
 ## What is CSS? 
@@ -24,7 +34,7 @@
 CSS is a rule-based language - you define rules by specifying groups of styles that should be applied to particular or groups of elements on your web page.
 
 For example:
-```html
+```css
 h1 {
   color: red;
   font-size: 2.5em;
@@ -76,14 +86,14 @@ Inline Styles
 In this section we will take a brief tour though some of the more common types of selector you will encounter
 - Selecting HTML element: \<element_name>{} 
   - Example
-```html
+```css
 p {
   color: green;
 }
 ```
 - Adding a class: "."\<class_name>
   - Example
-```html
+```css
 .special {
   color: orange;
   font-weight: bold;
@@ -115,8 +125,79 @@ The case-sensitive ID selectore starts with a hash(#) rather than a dot characte
 |.class|Medium|Reusable|when multiple elements need the same styling|
 |element|lowest|Applies globally|when applying general styles to all element of the same type|
 
+### Selector Lists
 
+### The Universal Selector
+The universal selector is indicated by an asterisk(*).
+- For example, 
+```css
+p * {
+    /* selects all the nested elements inside the <p> element */ 
+}
+```
 
 ### References
 [Basic Selectors](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
+## Attribute Selectors
+
+### Presence and Value selectors
+These selectors enable the selection of an element based on the presenece of an attribute alone (for example href), or on various defferent matches against the value of the attribute.
+- For example:
+```css
+body {
+  font-family: sans-serif;
+}
+li[class] {
+  font-size: 120%;
+}
+
+li[class="a"] {
+  background-color: yellow;
+}
+
+li[class~="a"] {
+  color: red;
+}
+```
+
+### Substring matching selectors
+These selectors allow for more advanced matching of substrings inside the value of your attribute.
+- For example:
+```css
+body {
+  font-family: sans-serif;
+}
+li[class^="a"] {
+  /* This is class begin with a */
+  font-size: 120%;
+}
+
+li[class$="a"] {
+  /* This is class end with a*/
+  background-color: yellow;
+}
+
+li[class*="a"] {
+  /* This is class contain a */
+  color: red;
+}
+```
+
+### References
+[Attribute Selectors](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
+
+## Pseudo-classes and Pseudo-elements
+
+### What is pseudo-classes?
+A pseudo-classes is a selector that selects element that are in a specific state, e.g.
+A pseudo-classes are keywords that start with a colon(:). For example, **:hover** is a pseudo-class.
+
+### What is pseudo-elements?
+Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements.
+Pseudo-element start with a double colon **::**. For example, **::before** is a pseudo-element.
+
+
+
+### References
+[Pseudo](http://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
