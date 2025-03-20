@@ -26,6 +26,43 @@
     - [What is pseudo-classes?](#what-is-pseudo-classes)
     - [What is pseudo-elements?](#what-is-pseudo-elements)
     - [References](#references-4)
+  - [Combinations](#combinations)
+    - [Descendant combinator](#descendant-combinator)
+    - [Child combinator](#child-combinator)
+    - [Next-sibling combinator](#next-sibling-combinator)
+    - [Subsequent-sibling combinator](#subsequent-sibling-combinator)
+    - [Creating complex selectors with nesting](#creating-complex-selectors-with-nesting)
+    - [References](#references-5)
+  - [Box Model](#box-model)
+    - [What is the CSS box model ?](#what-is-the-css-box-model-)
+    - [Margins, paddings, and borders](#margins-paddings-and-borders)
+      - [Margin](#margin)
+    - [Borders](#borders)
+      - [Padding](#padding)
+    - [References](#references-6)
+  - [Handling conflicts](#handling-conflicts)
+    - [Controlling inheritance](#controlling-inheritance)
+    - [Refereces](#refereces)
+  - [Value and Units](#value-and-units)
+    - [References](#references-7)
+  - [Sizing](#sizing)
+    - [References](#references-8)
+  - [Background and borders](#background-and-borders)
+    - [References](#references-9)
+  - [Overflow](#overflow)
+    - [References](#references-10)
+  - [Image, audio, form](#image-audio-form)
+    - [References](#references-11)
+  - [Styling Tables](#styling-tables)
+    - [References](#references-12)
+  - [Text and font fundamental](#text-and-font-fundamental)
+    - [References](#references-13)
+  - [Styling lists](#styling-lists)
+    - [References](#references-14)
+  - [Styling Links](#styling-links)
+    - [References](#references-15)
+  - [Web Font](#web-font)
+    - [References](#references-16)
 
 
 ## What is CSS? 
@@ -197,7 +234,131 @@ A pseudo-classes are keywords that start with a colon(:). For example, **:hover*
 Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements.
 Pseudo-element start with a double colon **::**. For example, **::before** is a pseudo-element.
 
+### References
+[Pseudo](http://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+
+## Combinations
+
+### Descendant combinator
+The descentant combinator - typical represented by single space ( ) character.
+
+### Child combinator
+The child combinator (>) is placed between two CSS selectors.
+
+### Next-sibling combinator
+The next-sibling combinator (+) is placed between two CSS selectors.
+
+### Subsequent-sibling combinator
+If you want to select siblings of an element even if they are not directly adjacent, then you can use the subsequent-sibling combinator(~)
+
+### Creating complex selectors with nesting
 
 
 ### References
-[Pseudo](http://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+[Combinations](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinatorso)
+
+## Box Model
+
+### What is the CSS box model ?
+The CSS box model as a whole applies to block boxes and defines how the different parts of a box - margin, border, padding and conten - work together to create a box that you can see your page
+
+Part of the box:
+- Content box: The area where your content is displayed.
+- Padding box: The padding sits around the content as white spaces
+- Border box: The border box wraps the content and any padding
+- Margin box: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements.
+
+The below diagram shows these layers:
+![These is the diagram for the css box model](../images/week-1/diagram-cssBoxModel.png)
+
+### Margins, paddings, and borders
+You're already seen the **margin, padding, border** properties at work in the example above. 
+#### Margin
+The margin is an invisible space around your box. 
+We can control all margins of an element at once using the **margin** property, or each side individually using the equivalent longhand properties: **margin-top, -right, -left, -bottom**
+
+### Borders
+The border is drawn between the margin ad the padding of a box. If you are using the standard box model, the size of the border is added to the **width** and **height** of the content box. 
+For styling borders, there are a large number of properties - there are four borders, and each border has a style, width, and color that we might want to manipulate.
+
+#### Padding
+The padding sits between the border and the content area and it used to push the content away for the border.
+
+
+### References 
+[Box Model](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
+
+## Handling conflicts 
+
+### Controlling inheritance 
+CSS provides five special universal propety values of controlling inheritance.
+- **inherit**: Sets the property value applied to a selected element to be the same as that of its parent element.
+- **initial**: Sets the property value applied to selected element to the initial value of that property.
+- **revert**: Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property.
+- **revert-layer**: Resets the property value applied to selected element to the value established in a previous cascade layer.
+- **unset**: Resets the property to its natural value, which means that if the property is naturally inherited it acts like **inherit**, otherwise it acts like **initial**.
+
+
+
+### Refereces
+[Handling conflicts](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+
+## Value and Units
+
+
+### References
+[Value and Units](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+
+## Sizing
+
+### References
+[Sizing](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)
+
+## Background and borders
+
+
+### References
+[Background and borders](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+
+## Overflow
+
+### References
+[Overflow](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
+
+## Image, audio, form
+
+### References
+[Image, audio, form](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
+
+## Styling Tables
+
+### References
+[Styling Tables](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)
+
+## Text and font fundamental
+
+### References
+[Text and font](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+
+## Styling lists
+
+### References
+[Styling lists](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Styling_lists)
+
+## Styling Links
+
+### References
+[Styling links](http://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Styling_links)
+
+## Web Font
+
+### References
+[web font](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts)
+
+
+
+
+
+
+
+
