@@ -4,34 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
+<!-- Header -->
     <header class="header">
-        <div class="nav">
-            <nav class="nav-link">
-                <ul>
-                    <li herf="#">Home</li>
-                    <li herf="#">About</li>
-                    <li herf="#">Blog</li>
-                    <li herf="#">Contact</li>
-                </ul>
-            </nav>
-        </div>
+
+        <nav class="nav-bar">
+            <ul class="nav-link">
+                <li><a href="#">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#">BLOG</a>
+                    <div class="dropdown-content">
+                        <a href="#"><p>Javascrip</p></a>
+                        <a href="#"><p>HTML</p></a>
+                        <a href="#"><p>CSS</p></a>
+                    </div>
+                </li>
+                <li><a href="#">ABOUT ME</a></li>
+                <li><a href="#">YOUTUBE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <div class="social-icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-play"></i></a>
+            </div>
+        </nav>
+        
     </header>
+
+    <!-- Hero information -->
+    <section class="hero">
+        <div class="hero-information">
+            <div class="hero-text">
+                <h1 class="name">NAVY</h1>
+                <p class="description">The Programing Blog</p>
+            </div>
+            <div class="divider">
+                <span class="line left"></span>
+                <span class="diamond">◆</span>
+                <span class="line right"></span>
+            </div>
+            <div class="social-icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-play"></i></a>
+            </div>
+        </div>
+    </section>
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Hero information -->
-        <section class="hero-information"></section>
         
         <!-- List of blogs -->
-        <section class="blogs"></section>
+        <section class="blogs">
+            <div class="blog-list"> 
+                <div class="blog-item">
+                    <h3 class="title">Blog1</h3>
+                    
+                    <div class="divider">
+                        <span class="line left"></span>
+                        <span class="diamond">◆</span>
+                        <span class="line right"></span>
+                    </div>
+                    
+                    <div class="description-blog">
+                        This is a description of the blog post 1. 
+                    </div>
+
+                    <div class="button-readmore">
+                        <a href="#" class="readmore-button">Read more</a>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <h3 class="title">Blog2</h3>
+                    
+                    <div class="divider">
+                        <span class="line left"></span>
+                        <span class="diamond">◆</span>
+                        <span class="line right"></span>
+                    </div>
+                    
+                    <div class="description-blog">
+                        This is a description of the blog post 2. 
+                    </div>
+
+                    <div class="button-readmore">
+                        <a href="#" class="readmore-button">Read more</a>
+                    </div>
+                </div>
+
+                <div class="blog-item">
+                    <h3 class="title">Blog3</h3>
+                    
+                    <div class="divider">
+                        <span class="line left"></span>
+                        <span class="diamond">◆</span>
+                        <span class="line right"></span>
+                    </div>
+                    
+                    <div class="description-blog">
+                        This is a description of the blog post 3. 
+                    </div>
+
+                    <div class="button-readmore">
+                        <a href="#" class="readmore-button">Read more</a>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <h3 class="title">Blog4</h3>
+                    
+                    <div class="divider">
+                        <span class="line left"></span>
+                        <span class="diamond">◆</span>
+                        <span class="line right"></span>
+                    </div>
+                    
+                    <div class="description-blog">
+                        This is a description of the blog post 4. 
+                    </div>
+
+                    <div class="button-readmore">
+                        <a href="#" class="readmore-button">Read more</a>
+                </div>
+            </div>
+        </section>
+        
+
     </main>
 
     <!-- Footer -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">    
+                <h3>Tags</h3>
+                <div class="tags">
+                    <a href="#" class="tag">Daily life</a>
+                    <a href="#" class="tag">Decluttering</a>
+                    <a href="#" class="tag">Du học</a>
+                    <a href="#" class="tag">Du lịch</a>
+                    <a href="#" class="tag">Đơn Đẹp</a>
+                    <a href="#" class="tag">Hàn Quốc</a>
+                    <a href="#" class="tag">Học ngoại ngữ</a>
+                    <a href="#" class="tag">JLPT</a>
+                    <a href="#" class="tag">Khám Phá</a>
+                    <a href="#" class="tag">Korea</a>
+                    <a href="#" class="tag">Lifestyle</a>
+                    <a href="#" class="tag">Minimalism</a>
+                    <a href="#" class="tag">Nhật Bản</a>
+                    <a href="#" class="tag">Nhật Bản</a>
+                    <a href="#" class="tag">Nấu ăn</a>
+                    <a href="#" class="tag">Starbucks</a>
+                    <a href="#" class="tag">Tsutaya</a>
+                    <a href="#" class="tag">Tối giản</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">    
+                <h3>Follow on Facebook</h3>
+                <div class="facebook-section">
+                    <div class="facebook-header">
+                        <img src="https://via.placeholder.com/40" alt="Profile Picture">
+                        <h4>The Hanoi Chamomile</h4>
+                    </div>
+                    <div class="facebook-stats">157,740 followers</div>
+                    <div class="facebook-actions">
+                        <a href="#">Follow Page</a>
+                        <a href="#"><i class="fas fa-share"></i> Share</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section subscribe-section">    
+                <h3>Subscribe</h3>
+                <p>Nếu bạn muốn theo dõi những bài viết tiếp theo của mình nhé!</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="subscriber-count">Join 4,291 other subscribers</div>
+            </div>
+        
+        </div>
+    </footer>
 
 </body>
 </html>

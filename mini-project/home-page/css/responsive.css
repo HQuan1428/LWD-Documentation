@@ -1,0 +1,27 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .facebook-actions {
+        justify-content: center;
+    }
+
+    .subscribe-form {
+        align-items: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* Adjust for smaller screens */
+    }
+}

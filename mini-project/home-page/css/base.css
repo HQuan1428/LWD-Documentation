@@ -1,0 +1,28 @@
+@import url('./components.css');
+@import url('./hero.css');
+@import url('./responsive.css');
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./blog.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}

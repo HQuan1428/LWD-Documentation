@@ -1,0 +1,67 @@
+.hero {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+
+.hero-information {
+    text-align: center;
+}
+
+.name {
+    font-size: 48px;
+    font-weight:lighter;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.line {
+    width: 50px;
+    height: 1px;
+    background-color: #d4a017;
+}
+
+.line.left {
+    margin-right: 10px;
+}
+
+.line.right {
+    margin-left: 10px;
+}
+
+.diamond {
+    color: #d4a017;
+    font-size: 12px;
+}
+
+.description {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.social-icon {
+    display: fles;
+    justify-content: space-between;
+}
+
+.social-icon a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.social-icon a:hover {
+    color: #d4a017;
+}
+
