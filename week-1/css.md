@@ -63,6 +63,21 @@
     - [References](#references-15)
   - [Web Font](#web-font)
     - [References](#references-16)
+  - [Web Layout](#web-layout)
+    - [References](#references-17)
+  - [Float](#float)
+    - [References](#references-18)
+  - [Positioning](#positioning)
+    - [References](#references-19)
+  - [FLexbox](#flexbox)
+    - [Why flexbox?](#why-flexbox)
+    - [References](#references-20)
+  - [Grid](#grid)
+    - [References](#references-21)
+  - [Responsive Design](#responsive-design)
+    - [References](#references-22)
+  - [Media queries](#media-queries)
+    - [References](#references-23)
 
 
 ## What is CSS? 
@@ -355,8 +370,56 @@ CSS provides five special universal propety values of controlling inheritance.
 ### References
 [web font](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts)
 
+## Web Layout
+
+### References
+[Web layout](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction)
+
+## Float
+
+### References
+[Web layout float](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Floats)
+
+## Positioning 
+
+### References
+[Web layout positioning](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
+
+## FLexbox
+
+### Why flexbox?
+CSS flexible box layout enables you to:
+- Vertically center a block of content inside its parent.
+- Make all children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.
+- Make all columns in a mutiple-column layout adopt the same height even if they contain a different amout of content.
 
 
+
+### References
+[Web layout flebox](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox)
+
+## Grid
+
+CSS grid is a two-dimensional layout system for the web.
+
+Flex grid with the **fr** unit
+
+
+
+### References
+[Web layout grid](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids)
+
+## Responsive Design
+
+Responsive web design (RWD) is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability.
+
+### References
+[Web responsive design](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
+
+## Media queries
+
+### References
+[Web media queries](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries)
 
 
 
