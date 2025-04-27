@@ -36,6 +36,43 @@ const t = 8 // Using const
   - Reserved words (like JS keywords) cannot be used as usual.
 
 
+Data types:
+- Javascripts has eight Datatypes:
+  - String
+  - Number
+  - Bigint
+  - Boolean
+  - Undefined
+  - Null
+  - Symbol
+  - Object
+- The Object Datatype 
+  - The object data type can contain both built-in objects, and **user defined objects:
+  - Built-in objects type can be:
+    - objects, array, dates, maps, sets,....
+- Javascript Types are Dynamic.
+  - Javascript has dynamic types. This means that the same variable can be used to hold different data types:
+```js
+let x;      // Now is a undefined
+x = 5;      // Now is a Number
+x = "John"; // Now is a string
+```
+- JS Arrays
+  - JS arrays are written with square brackets('[]')
+  - Array items are separated by commans.
+```js
+const cars = ["Saab", "Volvo", "BMW"];
+```
+- JS Objects
+  - JS objects are written with curly braces {}.
+  - Object properties are written as name: value pairs, separated by commans.
+```js
+const person = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "Blue"};
+```
+- The typeof Operator.
+  - You can use the JS **typeof** operator to find the type of a javascript variable.
+
+- Empty values has nothing to do with **undefined**.
 
 
 
