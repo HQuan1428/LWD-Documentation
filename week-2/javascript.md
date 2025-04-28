@@ -190,6 +190,35 @@ JS Function
   - Functions used as Variable Values.
   - Local variables: variables declared within a javascript function, become **LOCAL** to the function.
 
+Scope and Closures
+- Scope
+  - Global scope: variables declared outside any function or block are accessible everywhere.
+  - Function scope: variables declared inside a function are only accessible inside that function.
+  - Block scope (let, const): Variables exist only within the **{}** block where they are defined. 
+  - Automatically global: If you assign a value to a variable that has not been declared, it will automaticlly become a **GLOBAL** variable. 
+- Lexical Scope
+  - When a function is defined, it remembers the environment where it was created.
+  - A function can always access variables from where it was written, not where it was called.
+- Closure
+  - A closure happens when a function remembers variables from its outer (enclosing) scope even after that outer function has finished executing.
+  - Closures are extremely useful: for caching, private variables, event handling, etc...
+  - Example:
+  ```js
+  function createCounter() {
+    let count = 0;
+    
+    return function() {
+      count++;
+      console.log(count);
+    }
+  }
+
+  const counter = createCounter();
+  counter(); // 1
+  counter(); // 2
+  counter(); // 3
+  ```
+ 
 
 ## References
 [w3school.com](https://www.w3schools.com/js/js_syntax.asp)
