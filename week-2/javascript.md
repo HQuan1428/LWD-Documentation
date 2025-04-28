@@ -224,7 +224,47 @@ JS Hoisting
   - In other words; a variable can be used before it has been declared.
 - Hoistint is Javascript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
 
- 
+JS Data Structures
+- Objects: 
+  - Objects are variables too. But objects can contain many values.
+  - This code assign many values to an object.
+  - JS Object definition:
+    - Using an object literal.
+      - An object literal is a list of **name:value** pairs inside curly braces **{}**.
+      ```js
+      {firstName: "John", lastName: "Doe", age: 50, eyecolor: "blue"};
+      ```
+    - Using the **new** Keyword.
+      - Using **new Object()**, then adds properties:
+      ```js
+      // Create an Object
+      const person = new Object();
+
+      // Add Properties
+      person.firstName = "John";
+      person.lastName = "Doe";
+      person.age = 50;
+      person.eyeColor = "blue";
+      ```
+    - Using an object Constructor.
+  - Accessing Object Properties.
+    - You can access object properties in two ways:
+    ```js
+    objectName.propertyName;
+    objectName["propertyName"];
+    ```
+  - JS Object methods: methods are **function definitions** stored as **property values**.
+  ```js
+  const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+    }
+  };
+  ```
+  - 
 
 ## References
 [w3school.com](https://www.w3schools.com/js/js_syntax.asp)
