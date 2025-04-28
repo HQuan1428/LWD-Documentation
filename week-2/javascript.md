@@ -62,8 +62,76 @@ JS Operators
     - Adding two numbers, will return the sum as the numbers like 5 + 5 = 10.
     - Adding a number and a string, will return the sum as the concatenated string like 5 + "5" = 55.
 
+JS Control Structures
+- JS If Else Swtich.
+  - Conditional statements are used to perform different actions based on differents conditions.
+  - In JS we have the following conditional statements:
+    - Use **if** to specify a block of code to be excuted, if a specified condition is true.
+    - Use **else** to specify a block of code to be excuted, if the same condition is false.
+    - Use **else if** to specify a new condition to test, if the first condition is false.
+    - Use **switch** to specify many alternatives blocks of code to be executed.
+  - Example for **if**, **else**:
+  ```js
+  if (condition) {
+    /* code block */
+  }
+  else if (condition) {
+    /* code block */
+  }
+  else {
+    /* code block */
+  }
+  ```
+  - Example for **switch**:
+  ```js
+  switch (expression) {
+    case x:
+      // code block
+      break;
+    case y:
+      // code block
+      break;
+    default:
+      //code block
+  }
+  ```
+  - The **break** keyword:
+    - When JS reaches a **break** keyword, it breaks out of the code block.
 
-
+- JS Loop
+  - Loops are handy, if you want to run the same code over and over again, each time with a different value.
+  - Different kinds of Loops
+    - **for** - loops through a block of code a number of times.
+    ```js
+    for (let i = 0, i < 1000, i++) {
+      // code block
+    }
+    ```
+    - **for/in** - loops through the properties of an object.
+    ```js
+    for (key in object) {
+      // code block
+    }
+    ```
+    - **for/of** - loops through the values of an iterable object. 
+    ```js
+    for (variables in iterable) {
+      // code block
+    }
+    ```
+    - **while** - loops through a block of code while a specified condition a true.
+    ```js
+    while (condition) {
+      // code block
+    }
+    ```
+    - **do/while** - also loops through a block of code while a specified condition is true.
+    ```js
+    do {
+      // code block
+    }
+    while (condition)
+    ```
 
 
 
