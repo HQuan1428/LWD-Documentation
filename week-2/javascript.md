@@ -133,7 +133,9 @@ JS Control Structures
     while (condition)
     ```
 
-
+JS Function 
+- JS function syntax:
+  - A javascript function is defined with the **function** keyword, followed by a name, followed by parenthese **()**.
 
 ## References
 [w3school.com](https://www.w3schools.com/js/js_syntax.asp)
