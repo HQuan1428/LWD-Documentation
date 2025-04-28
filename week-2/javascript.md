@@ -176,6 +176,20 @@ JS Control Structures
 JS Function 
 - JS function syntax:
   - A javascript function is defined with the **function** keyword, followed by a name, followed by parenthese **()**.
+  - Function names same rules as variables.
+  - Example:
+  ```js
+  function name (parameter 1, parameter 2, ...) {
+    // code block
+  }
+  ``` 
+  - Function Invocation
+    - When an event occurs (when a user click a button).
+    - when it is invoked (called) from js code.
+    - Automatically (self invoked).
+  - Functions used as Variable Values.
+  - Local variables: variables declared within a javascript function, become **LOCAL** to the function.
+
 
 ## References
 [w3school.com](https://www.w3schools.com/js/js_syntax.asp)
