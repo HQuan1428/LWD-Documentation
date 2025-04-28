@@ -35,6 +35,34 @@ const t = 8 // Using const
   - Names are case sensitve (y ane Y are different variables).  
   - Reserved words (like JS keywords) cannot be used as usual.
 
+JS Operators
+- JS operators are used to perform different types of mathematical and logical computations.
+- Examples:
+  - The **Assignment Operator** = assigns values.
+  - The **Addtion Operator** + adds values.
+  - The **Multiplication Operator** * multiplies values.
+  - The **Comparison Operator** > compares values.
+- Types of JS operators.
+  - There are different types of javascript operators:
+    - Arithmetic Operators.
+    ![Arithmetic Operators](./../images/week-2/arithmetic-opterators.png)
+    - Assignment Operators.
+    ![Assignment Operators](./../images/week-2/assignment-operators.png)
+    - Comparison Operators.
+    ![Comparison Operators](./../images/week-2/comparison-operators.png)
+    - String Operators.
+    - Logical Operators.
+    ![Logical Operators](./../images/week-2/logical-operators.png)
+    - Bitwise Operators.
+    ![Bitwise Operators](./../images/week-2/bitwise-operators.png)
+    - Ternary Operators.
+    - Type Operators.
+    ![Type Operators](./../images/week-2/type-operators.png)
+  - Adding Strings and Numbers.
+    - Adding two numbers, will return the sum as the numbers like 5 + 5 = 10.
+    - Adding a number and a string, will return the sum as the concatenated string like 5 + "5" = 55.
+
+
 
 
 
