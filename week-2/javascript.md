@@ -218,6 +218,12 @@ Scope and Closures
   counter(); // 2
   counter(); // 3
   ```
+JS Hoisting 
+- Javascript declarations are hoisted.
+  - In JS, a variable can be declared after it has been used.
+  - In other words; a variable can be used before it has been declared.
+- Hoistint is Javascript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+
  
 
 ## References
