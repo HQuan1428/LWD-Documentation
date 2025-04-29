@@ -11,7 +11,8 @@
   - [Asynchronous Javascript.](#asynchronous-javascript)
     - [Callbacks:](#callbacks)
     - [Promises](#promises)
-    - [](#)
+    - [JS Async/await](#js-asyncawait)
+    - [JS Envent Loop](#js-envent-loop)
   - [References](#references)
 
 
@@ -452,7 +453,32 @@ myCalculator(5, 5, myDisplayer);
     function(error) {myDisplayer(error);}
   );
   ```
-###
+### JS Async/await
+Async Syntax
+- The keyword **async** before a function makes the function return a promise:
+Await Syntax
+- The keyword **await** can only be used inside an **async** function.
+- The **await** makes the function pause the execution and wait for a resolved promise before it continues.
+
+### JS Envent Loop
+Event loop is a mechanism that helps Javascript handle asynchronous tasks in a single-threaded environment.
+- Key Components
+|Component| Descriptions|
+|Call Stack| Where functions are executed (synchronously)|
+|Task Queue (Macro-task queue)| Queues tasks like **setTimeout, setInterval, I/O events**|
+|Microtash queue| Queues tasks like **.then()** callbacks from promise and **queueMicrotask()**|
+- How to the Event Loop works:
+  1. JS executes code line by line using the **call stack**.
+  2. When an **async task** is encountered (e.g., **setTimeout**, **fetch**).
+     1. It is delegated to the **Web APIs** or the environment (like NodeJS).
+  3. Once the async task is complete, its callback is pushed to either:
+     1. Microtash queue (e.g. Promise).
+     2. Task queue (e.g. **setTimeout**).
+  4. The event loop:
+     1. If the call stack is empty:
+        1. It first proccesses all microtasks.
+        2. Then takes the first task from the task queue and pushes it to the call stack.
+  5. The loop repeats forevers.
 
 
 ## References
