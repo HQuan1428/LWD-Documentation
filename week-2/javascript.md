@@ -1,5 +1,18 @@
 # Javascript
 
+- [Javascript](#javascript)
+  - [Why study Javascript?](#why-study-javascript)
+  - [Core Javascript Fundamentals.](#core-javascript-fundamentals)
+    - [Syntax and Basics.](#syntax-and-basics)
+    - [Scope and Closures](#scope-and-closures)
+    - [JS Hoisting](#js-hoisting)
+    - [JS Data Structures](#js-data-structures)
+    - [Error Handling.](#error-handling)
+  - [Asynchronous Javascript.](#asynchronous-javascript)
+    - [Callbacks:](#callbacks)
+  - [References](#references)
+
+
 ## Why study Javascript? 
 For me, It is a progamming language for web development. Anyone who wants to become a web developer starts with it and I am no exception ^_^.
 
@@ -190,7 +203,7 @@ JS Function
   - Functions used as Variable Values.
   - Local variables: variables declared within a javascript function, become **LOCAL** to the function.
 
-Scope and Closures
+### Scope and Closures
 - Scope
   - Global scope: variables declared outside any function or block are accessible everywhere.
   - Function scope: variables declared inside a function are only accessible inside that function.
@@ -218,13 +231,13 @@ Scope and Closures
   counter(); // 2
   counter(); // 3
   ```
-JS Hoisting 
+### JS Hoisting 
 - Javascript declarations are hoisted.
   - In JS, a variable can be declared after it has been used.
   - In other words; a variable can be used before it has been declared.
 - Hoistint is Javascript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
 
-JS Data Structures
+### JS Data Structures
 - Objects: 
   - Objects are variables too. But objects can contain many values.
   - This code assign many values to an object.
@@ -264,7 +277,131 @@ JS Data Structures
     }
   };
   ```
-  - 
+  - **this** refer to the **person object**.
+  - In JS, Objects are King. If you Understand objects, you understand JS.
+    - **Objects** are containers for **Properites** and **Methods**.
+    - **Properities** are named Values.
+    - **Methods** are **Functions** stored as **Properities**.
+    - **Properities** can be primitive values, functions, or even other objects.
+  - JS Objects are Mutable:
+    - They are addressed by reference, not by value.
+  - Display JS Objects
+    - Displaying the object Properities by name.
+    - Displaying the object Properities in a loop.
+    - Displaying the object using Object.values().
+    - Displaying the object uisng JSON.stringify().
+
+### Error Handling.
+- Throw, and Try...Catch...Finally
+  - The **try** statement defines a code block to run(to try).
+  - The **catch** statement defines a code block to handle any error.
+  - The **finally** statement defines a code block to run regardless of the result.
+  - The **throw** statement defines a custom error.
+- Errors will happen!
+  - When executing JS code, different errors occur.
+  - Errors can be coding errors made by the programmer, errors due to wrong input, and other unforeseeable things
+  - Example: In this example we misspelled "alert" as " addlert" to deliberately produce an error:
+  ```js
+  <p id="demo"></p>
+
+  <script>
+  try {
+    adddlert("Welcome guest!");
+  }
+  catch(err) {
+    document.getElementById("demo").innerHTML = err.message;
+  }
+  </script> 
+  ```
+- JS **try** and **catch** 
+  - The **try** allows you to define a block of code to be tested for errors while it is being executed.
+  - The **catch** allows you to define a block of code to be executed, if an error occurs in the try block.
+  ```js
+  try {
+    // block of code to try
+  }
+  catch(err) {
+    // block of code to handle errors.
+  }
+
+- JS throw errors.
+  - The **throw** allows you to define a block of code to be create a custom error. -> Throw an exception.
+  ```js
+  throw "Too big";  // throw a text
+  throw 500;        // throw a number
+  ```
+- Example: 
+```js
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try {
+    if(x.trim() == "") throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 5) throw "too low";
+    if(x > 10) throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+</script>
+
+</body>
+</html>
+```
+- The **finally** statement
+  - The **finally** statement lets you execute code, after try and catch, regarless of the result.
+  ```js
+  try {
+    // Block of code to try
+  }
+  catch(err) {
+    // Block of code to handle errors
+  }
+  finally {
+    // Block of code to be executed regardless of the try / catch result
+  }
+  ```
+- The Errors Object
+  - JS has a built in error object that provides error informantion when an error occurs.
+  - The error object provides two useful properties: name ad message.
+
+## Asynchronous Javascript.
+
+### Callbacks:
+- Using a callback, you could call the calculator function (**myCalculator**) with a callback (**myCallback**), and let the calculator function run the callback after the calculation is finished.
+- Example:
+  - In example, **myDisplayer** is callback function.
+  - It is passed to **myCalculator()** as an argument.
+```js
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer);
+```
+
+
+
 
 ## References
 [w3school.com](https://www.w3schools.com/js/js_syntax.asp)
