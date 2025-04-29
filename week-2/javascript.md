@@ -10,6 +10,8 @@
     - [Error Handling.](#error-handling)
   - [Asynchronous Javascript.](#asynchronous-javascript)
     - [Callbacks:](#callbacks)
+    - [Promises](#promises)
+    - [](#)
   - [References](#references)
 
 
@@ -400,7 +402,57 @@ function myCalculator(num1, num2, myCallback) {
 myCalculator(5, 5, myDisplayer);
 ```
 
+### Promises
+- "Producing code" is code that can thake some time.
+- "Consuming code" is code that must wait for the result.
+- A Promisesis an Object that links Producing code and Consuming code.
+- JS Promises Object.
+  - Syntax
+  ```js
+  let myPromise = new Promise(function(myResolve, myReject) {
+  // "Producing Code" (May take some time)
 
+    myResolve(); // when successful
+    myReject();  // when error
+  });
+
+  // "Consuming Code" (Must wait for a fulfilled Promise)
+  myPromise.then(
+    function(value) { /* code if successful */ },
+    function(error) { /* code if some error */ }
+  );
+  ```
+  - Properties.
+    - A JS promise object can be:
+      - Pending
+      - Fulfilled
+      - Rejected
+    - The promise object supports two properties: **state** and **result**.
+      - While a promise object is "pending" (working), the result is undefined.
+      - When a promise object is "fulilled", the result is a value.
+      - When a promise object is "rejected", the result is an error object.
+  - Example:
+  ```js
+  function myDisplayer(some) {
+    document.getElementById("demo").innerHTML = some;
+  }
+  let myPromise = new Promise(function(myResolve, myReject) {
+    let x = 0
+
+    // The producing code (this may take some time)
+    if (x == 0) {
+      myResolve("OK");
+    } else {
+      myReject("Error");
+    }
+  });
+
+  myPromise.then(
+    function(value) {myDisplayer(value);},
+    function(error) {myDisplayer(error);}
+  );
+  ```
+###
 
 
 ## References
