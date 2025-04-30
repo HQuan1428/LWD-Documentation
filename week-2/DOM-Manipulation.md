@@ -1,5 +1,21 @@
 # DOM Manipulation
 
+## Table of contents
+- [DOM Manipulation](#dom-manipulation)
+  - [Table of contents](#table-of-contents)
+  - [What is the HTML DOM](#what-is-the-html-dom)
+  - [HTML DOME Methods](#html-dome-methods)
+  - [JS HTML DOM Document](#js-html-dom-document)
+    - [Finding HTML elements](#finding-html-elements)
+    - [Changing HTML elements](#changing-html-elements)
+    - [Adding and Deleting elements](#adding-and-deleting-elements)
+    - [Adding Event Handles](#adding-event-handles)
+    - [Finding HTML Objects](#finding-html-objects)
+  - [JS HTML DOM Elements](#js-html-dom-elements)
+    - [Finding HTML Elements](#finding-html-elements-1)
+  - [References](#references)
+
+
 ## What is the HTML DOM
 
 The **HTLM DOM** model is constructed as a tree of **Objects**:
