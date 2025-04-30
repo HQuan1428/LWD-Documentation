@@ -11,3 +11,7 @@ See more details [here](./DOM-Manipulation.md)
 ## APIs
 API stands for **A**pplication **P**rogramming **I**nterface.
 See more details [here](./web-APIs.md)
+
+## ES6 - Modern Javascript
+This is a version of JS. 
+See more details [here](./ES6-version.md)
