@@ -14,39 +14,21 @@ form.addEventListener("submit", e => {
     const listcity = list.querySelectorAll(".ajax-section .city");
     const listItems = Array.from(listcity);
 
-    console.log('listItems:', listItems);
-
-    if (listItems.length > 0) {
-        const filterArray = listItems.filter(item => {
-            let content = "";
-            // handle input value
-            if (inputVal.includes(",")) {
-                if (inputVal.split(",")[1].length > 2) {
-                    inputVal = inputVal.split(",")[0];
-                    content = item
-                        .querySelector(".city-name span").textContent.toLowerCase();
-                } else {
-                    content = item.querySelector(".city-name").dataset.name.toLowerCase();
-                }
-            } else {
-                content = item.querySelector(".city-name span").textContent.toLowerCase();
-            }
-
-            console.log('content:', content);
-            console.log('inputVal:', inputVal.toLowerCase());
-            
-            return content == inputVal.toLowerCase();
-        });
-
-        if (filterArray.length > 0) {
-            msg.textContent = `You already know the weather for ${
-            filterArray[0].querySelector(".city-name span").textContent
-            } ...otherwise be more specific by providing the country code as well 😉`;
-            
-            form.reset();
-            input.forcus();
+    let content = "";
+    // handle input value
+    if (inputVal.includes(",")) {
+        if (inputVal.split(",")[1].length > 2) {
+            inputVal = inputVal.split(",")[0];
         }
     }
+
+    const list_item = list.querySelectorAll(".ajax-section .city h2 span");
+    //console.log(`list_item`, list_item.innerHTML);
+    let listItemsArray = [];
+    if (list && listItems.length > 0) {
+        listItemsArray = Array.from(list_item, item => item.innerHTML?.toLowerCase() || "");
+    }
+    
 
 
     // api call
@@ -57,6 +39,15 @@ form.addEventListener("submit", e => {
         .then(Response => Response.json())
         .then(data => {
             const { main, name, sys, weather } = data;
+
+            // check if the city is already in the list
+            if (listItemsArray.includes(name.toLowerCase())) {
+                msg.textContent = `You already know the weather for ${name} ...otherwise be more specific by providing the country code as well 😉`;
+                form.reset();
+                input.focus();
+                return;
+            }
+
             const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
                 weather[0]["icon"]
             }.svg`;
