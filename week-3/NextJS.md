@@ -141,3 +141,18 @@ Createting a new project:
   npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example" --use-pnpm
   ```
 
+## CSS Styling
+
+### Global styles
+
+```ts
+import '@/app/ui/global.css';
+```
+- '@' is a alias for the relaltive path of the file.
+
+- Tailwind is a CSS framework that speeds up the development process by allowing you to quickly write **utility classes** directly in your React code.
+
+- **clsx** is a library that lets you toggle class names easily. 
+
+## Optimizing Fonts and Images
+
