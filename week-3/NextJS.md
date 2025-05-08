@@ -155,4 +155,26 @@ import '@/app/ui/global.css';
 - **clsx** is a library that lets you toggle class names easily. 
 
 ## Optimizing Fonts and Images
+- Add custom fonts with **next/font**
+- Add images with **next/image**
+
+
+## Creating Layouts and Pages
+
+### Nested routing 
+Next.js uses file-system routing where folders are used to create nested routes. Each folder represents a **route segment** that maps to a **URL segment**
+![Nested routing](./../images/week-3/nested-routing.png)
+
+### next/link - usePathname() hook
+- In Next.js, you can use the **\<Link />** Component to link between pages in your application. \<Link> allows to do **client-side-navigation** with javascript.
+
+
+## Fetching Data
+
+### Choosing how fetch data
+
+API layer
+  - A intermediary layer between you application code and database. 
+
+Database Queries
 
